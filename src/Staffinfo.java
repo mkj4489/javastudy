@@ -74,11 +74,18 @@ class Staff {
     }
 */
 }
-
+class RemoteStaff extends Staff {
+    public String location;
+    // コンストラクタ
+    public RemoteStaff(String name, int staffid, String email) {
+        super(name, staffid, email);
+    }
+}
 public class Staffinfo {
     public static void main(String[] args) {
         Staff yamada = new Staff("Taro Yamada",12345, "yamada@abc.co.jp");
-        //yamada.name = "Taro yamada";
+        RemoteStaff tanaka = new RemoteStaff("Hanako Tanaka", 123456, "tanaka@abc.co.jp");
+        tanaka.location = "大阪";
 
         //yamada.sayhello();
         // System.out.println(yamada.name);
@@ -86,6 +93,12 @@ public class Staffinfo {
         System.out.println("氏名：" + yamada.getName());
         System.out.println("社員番号：" + yamada.getStaffid());
         System.out.println("Email：" + yamada.getEmail());
+
+        System.out.println("[社員情報]");
+        System.out.println("氏名：" + tanaka.getName());
+        System.out.println("社員番号：" + tanaka.getStaffid());
+        System.out.println("Email：" + tanaka.getEmail());
+        System.out.println("Email：" + tanaka.location);
     }
 
 }
