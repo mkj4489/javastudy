@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
@@ -13,8 +15,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Label label = new Label("Hello JavaFX!");
+        TextField field = new TextField();
+        Button button = new Button("送信");
+
         BorderPane pane = new BorderPane();
-        pane.setCenter(label);
+        pane.setTop(label);
+        pane.setCenter(field);
+        pane.setBottom(button);
         Scene scene = new Scene(pane, 400, 300);
         primaryStage.setScene(scene);
         /*
