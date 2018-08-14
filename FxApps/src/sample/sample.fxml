@@ -3,6 +3,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<BorderPane xmls="http://javafx.com/javafx/8"
+          xmlns:fx="http://javafx.com/fxml/1" prefHeight="300" prefWidth="400">
+    <top>
+            <Lavel text = "Hello JavaFX!" Border.alignment="CENTER" />
+    </top>
+    <center>
+            <TextField BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+            <Button text = "送信" BorderPane.alignment = "CENTER" />
+    </bottom>
+</BorderPane>
